@@ -1,4 +1,4 @@
-"use strict";
+import { FlightLogFieldPresenter } from "./flightlog_fields_presenter";
 
 const
     FIELD_THROTTLE_NAME = ['rcCommands[3]'],
@@ -8,7 +8,7 @@ const
     MAX_ANALYSER_LENGTH = 300 * 1000 * 1000, // 5min
     NUM_VS_BINS = 100;
 
-var GraphSpectrumCalc = GraphSpectrumCalc || {
+export const GraphSpectrumCalc = {
     _analyserTimeRange : { 
             in: 0,
             out: MAX_ANALYSER_LENGTH
